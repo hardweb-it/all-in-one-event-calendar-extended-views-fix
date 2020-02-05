@@ -46,8 +46,8 @@ function hw_fix_aioecev_enable_extension() {
 }
 
 function hw_fix_aioecev_disable_extension() {
-	if ( !is_plugin_active( 'all-in-one-event-calendar-extended-views/all-in-one-event-calendar-extended-views.php' ) ) {
-		activate_plugin('all-in-one-event-calendar-extended-views/all-in-one-event-calendar-extended-views.php');
+	if ( is_plugin_active( 'all-in-one-event-calendar-extended-views/all-in-one-event-calendar-extended-views.php' ) ) {
+		deactivate_plugins('all-in-one-event-calendar-extended-views/all-in-one-event-calendar-extended-views.php');
 	}
 }
 ?>
